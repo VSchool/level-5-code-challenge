@@ -1,23 +1,18 @@
 import React from "react"
 
 function Bounty(props){
-    console.log(props.living)
     const { firstname, lastname, living, bounty, type, _id } = props
     return(
-        <div className="bounty">
-    
-                <h1>First name: { firstname }</h1>
-                <h1>Last name: { lastname }</h1>
-                <h1>Living: { living }</h1>
-                <h1>Bounty: { bounty }</h1>
-                <h1>Type: { type }</h1>
-                
-                <button 
-                    className="delete-btn"
-                    onClick={() => props.deleteBounty(_id)}>
-                    Delete
-                </button>
-                
+        <div style={{
+            border: "2px solid #000", 
+            display: "inline-block", 
+            margin: "0px 5px", 
+            padding: "10px"
+        }}>
+            <h1>{firstname} {lastname}</h1>
+            <h2>Living: { living }</h2>
+            <h2>Bounty: { bounty }</h2>
+            <h2>Type: { type }</h2>
         </div>
     )
 }

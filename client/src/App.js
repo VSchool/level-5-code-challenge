@@ -6,24 +6,22 @@ export default function App(){
     const [bounties, setBounties] = useState([])
     
     function getBounties(){
-        // 1. Make an axios request on the front end to get the list of bounties - frontend
-        
+        // 3. Make an axios request on the front end to get the list of bounties - frontend
     }
 
     useEffect(() => {
-            getBounties()
-        }, [])
+        getBounties()
+    }, [])
     
     return(
         <div>
             <div className="bounty-container">
-            
                 { 
                     bounties.map( bounty => 
                         <Bounty 
                             {...bounty} 
                             key={bounty._id}
-                            />) 
+                        />) 
                 }
             </div>
         </div>
